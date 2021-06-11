@@ -4,7 +4,7 @@ const Createuser = require('../models/createuser')
 //get all user
 router.get("/" ,async(req,res)=>{
     try{
-    const alluser= await createuser.find()
+    const alluser= await Createuser.find()
     res.json(alluser)
     }catch(err){
         res.json({msg:err})
